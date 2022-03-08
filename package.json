@@ -2,12 +2,14 @@
   "name": "sc-tools",
   "private": true,
   "devDependencies": {
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
   },
   "scripts": {
     "version": "lerna version --conventional-commits",
     "prerelease": "lerna version --conventional-commits --conventional-prerelease",
     "graduate": "lerna version --conventional-commits --conventional-graduate",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "prepare": "husky install",
   }
 }
