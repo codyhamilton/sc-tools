@@ -3,5 +3,11 @@
   "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "version": "lerna version --conventional-commits",
+    "prerelease": "lerna version --conventional-commits --conventional-prerelease",
+    "graduate": "lerna version --conventional-commits --conventional-graduate",
+    "release": "lerna publish"
   }
 }
