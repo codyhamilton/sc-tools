@@ -1,0 +1,87 @@
+{
+  "ships": [
+    {
+      "name": "Mustang Alpha",
+      "manufacturer": "Consolidated Outland",
+      "quantum": 533,
+      "hydrogen": 1000,
+      "weight": 35000,
+      "capacity": 4,
+      "scm": 180,
+      "afterburner": 1100
+    },
+    {
+      "name": "Aurora ES",
+      "manufacturer": "RSI",
+      "quantum": 533,
+      "hydrogen": 1000,
+      "weight": 35000,
+      "capacity": 3,
+      "scm": 150,
+      "afterburner": 1100
+    },
+    {
+      "name": "100i",
+      "manufacturer": "Origin",
+      "quantum": 533,
+      "hydrogen": 1000,
+      "weight": 35000,
+      "capacity": 2,
+      "scm": 180,
+      "afterburner": 1000
+    }
+  ],
+
+  "bodies": [
+    {
+      "name": "Stanton",
+      "position": { "x": 0, "y": 0, "z": 0 }
+    },
+    {
+      "name": "Microtech",
+      "position": { "x": 1000, "y": 1000, "z": 0 },
+      "orbiting": "Stanton"
+    },
+    {
+      "name": "Euterpe",
+      "position": { "x": 5, "y": 5, "z": 0 },
+      "orbiting": "Microtech"
+    },
+    {
+      "name": "Clio",
+      "position": { "x": -5, "y": 5, "z": 0 },
+      "orbiting": "Microtech"
+    }
+  ],
+
+  "locations": [
+    {
+      "name": "Buds Growery",
+      "body": "Eurterpe",
+      "position": { "x": 10, "y": 3, "z": 0 },
+      "hasPlatform": false,
+      "hasMarker": true
+    },
+    {
+      "name": "Shubin Mining Facility ER-1",
+      "body": "Microtech",
+      "position": { "x": 10, "y": 3, "z": 0 },
+      "hasPlatform": true,
+      "hasMarker": true
+    },
+    {
+      "name": "Private Property",
+      "body": "Clio",
+      "position": { "x": 10, "y": 3, "z": 0 },
+      "hasPlatform": false,
+      "hasMarker": false
+    },
+    {
+      "name": "Microtech landing locker ",
+      "body": "Microtech",
+      "position": { "x": 0, "y": 3, "z": 0 },
+      "hasPlatform": true,
+      "hasMarker": false
+    }
+  ]
+}
