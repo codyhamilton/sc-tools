@@ -1,6 +1,7 @@
 {
   "ships": [
     {
+      "id": 1,
       "name": "Mustang Alpha",
       "manufacturer": "Consolidated Outland",
       "quantum": 533,
@@ -11,6 +12,7 @@
       "afterburner": 1100
     },
     {
+      "id": 2,
       "name": "Aurora ES",
       "manufacturer": "RSI",
       "quantum": 533,
@@ -21,6 +23,7 @@
       "afterburner": 1100
     },
     {
+      "id": 3,
       "name": "100i",
       "manufacturer": "Origin",
       "quantum": 533,
@@ -34,20 +37,24 @@
 
   "bodies": [
     {
+      "id": 1,
       "name": "Stanton",
       "position": { "x": 0, "y": 0, "z": 0 }
     },
     {
+      "id": 2,
       "name": "Microtech",
       "position": { "x": 1000, "y": 1000, "z": 0 },
       "orbiting": "Stanton"
     },
     {
+      "id": 3,
       "name": "Euterpe",
       "position": { "x": 5, "y": 5, "z": 0 },
       "orbiting": "Microtech"
     },
     {
+      "id": 4,
       "name": "Clio",
       "position": { "x": -5, "y": 5, "z": 0 },
       "orbiting": "Microtech"
@@ -56,6 +63,7 @@
 
   "locations": [
     {
+      "id": 1,
       "name": "Buds Growery",
       "body": "Eurterpe",
       "position": { "x": 10, "y": 3, "z": 0 },
@@ -63,6 +71,7 @@
       "hasMarker": true
     },
     {
+      "id": 2,
       "name": "Shubin Mining Facility ER-1",
       "body": "Microtech",
       "position": { "x": 10, "y": 3, "z": 0 },
@@ -70,6 +79,7 @@
       "hasMarker": true
     },
     {
+      "id": 3,
       "name": "Private Property",
       "body": "Clio",
       "position": { "x": 10, "y": 3, "z": 0 },
@@ -77,6 +87,7 @@
       "hasMarker": false
     },
     {
+      "id": 4,
       "name": "Microtech landing locker ",
       "body": "Microtech",
       "position": { "x": 0, "y": 3, "z": 0 },

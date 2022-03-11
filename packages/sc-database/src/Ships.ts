@@ -2,8 +2,13 @@ import { Query, db } from './db';
 import type { Queryable } from './db';
 
 
+/**
+ * Represents a ship
+ *
+ * Is a subset of available data from SC DB
+ */
 export interface Ship extends Queryable {
-  readonly id?: number;
+  readonly id: number;
   readonly name: string;
   readonly quantum: number;
   readonly hydrogen: number;
@@ -13,7 +18,18 @@ export interface Ship extends Queryable {
   readonly afterburner: number;
 }
 
-export const Ships = new Query<Ship>({
-  list: db.ships,
-  keys: ["name", "manufacturer"]
-});
+/**
+ * Queryable ship database
+ *
+ * Alows searching by name or manufacturer
+ */
+class ShipDB extends Query<Ship> {
+  constructor() {
+    super({
+      list: db.ships,
+      keys: ["name", "manufacturer"]
+    });
+  }
+}
+
+export const Ships = new ShipDB();

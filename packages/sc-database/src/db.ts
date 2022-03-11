@@ -9,17 +9,17 @@ interface Point {
 }
 
 export interface Queryable {
-  readonly id?: number;
+  readonly id: number;
 }
 export interface Body extends Queryable {
-  readonly id?: number;
+  readonly id: number;
   readonly name: string;
   readonly position: Point;
   readonly orbiting?: string;
 }
 
 export interface Commodity extends Queryable {
-  readonly id?: number;
+  readonly id: number;
   readonly name: string;
   readonly category: string;
   readonly buyPrice: number;
@@ -31,7 +31,7 @@ export interface Commodity extends Queryable {
 }
 
 export interface Location extends Queryable {
-  readonly id?: number;
+  readonly id: number;
   readonly name: string;
   readonly body?: string
   readonly position: Point;
@@ -54,9 +54,12 @@ interface QueryOpts<T> {
 }
 
 export class Query<T extends Queryable> {
-  declare fuse: Fuse<T>;
+  private fuse: Fuse<T>;
+  private list: T[];
+
   constructor(opts: QueryOpts<T>) {
-    this.fuse = new Fuse(opts.list, {
+    this.list = opts.list;
+    this.fuse = new Fuse(this.list, {
       includeScore: false,
       keys: opts.keys
     })
@@ -65,5 +68,9 @@ export class Query<T extends Queryable> {
   public find(name: string): Fuse.FuseResult<T>[] {
     const result = this.fuse.search(name);
     return result;
+  }
+
+  public getAll(): T[] {
+    return this.list;
   }
 }
