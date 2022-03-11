@@ -1,22 +1,35 @@
 import React from 'react';
-import Button from './components/Button'
-import './App.css';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import NavBar from './components/NavBar';
+import Setup from './components/Setup';
+import Route from './components/Route';
+import Status from './components/Status';
+
+const Item = styled(Paper)(({ theme }) => ({
+  // default
+}));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button/>
-      </header>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <NavBar></NavBar>
+      <Grid container spacing={2} padding={2}>
+        <Grid item xs={12} sm={6} lg={4}>
+          <Item><Setup/></Item>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={4}>
+          <Item><Route/></Item>
+        </Grid>
+        <Grid item xs={12} lg={4}>
+          <Item><Status/></Item>
+        </Grid>
+      </Grid>
+    </Box>
+
+
   );
 }
 
